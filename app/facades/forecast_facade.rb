@@ -5,6 +5,6 @@ class ForecastFacade
 
   def get_current_weather
     lat_long = MapquestService.get_coordinates(@location)
-    WeatherService.get_forecast_weather(lat_long[:lat], lat_long[:lng])
+    forecast_json = WeatherService.get_forecast_weather(lat_long[:lat], lat_long[:lng])
   end
 end
