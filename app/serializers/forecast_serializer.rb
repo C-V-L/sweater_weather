@@ -39,8 +39,6 @@ class ForecastSerializer
         {
           time: hour[:time],
           temperature: hour[:temp_f],
-          wind_speed: hour[:wind_mph],
-          wind_direction: hour[:wind_dir],
           conditions: hour[:condition][:text],
           icon: hour[:condition][:icon]
         }
