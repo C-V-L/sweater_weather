@@ -4,8 +4,8 @@ class WeatherService
     JSON.parse(response.body, symbolize_names: true)
   end
   
-  def self.get_weather(lat, long)
-    get_url("/v1/current.json?key=#{ENV["WEATHER_API_KEY"]}&q=#{lat},#{long}")
+  def self.get_forecast_weather(lat, long)
+    get_url("/v1/forecast.json?key=#{ENV["WEATHER_API_KEY"]}&q=#{lat},#{long}&days=5&aqi=no&alerts=no")
   end
 
   private 
