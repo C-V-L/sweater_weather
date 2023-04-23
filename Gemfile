@@ -49,6 +49,7 @@ group :development, :test do
   gem "webmock"
   gem "factory_bot_rails"
   gem "faker"
+  gem "simplecov"
 end
 
 group :development do
