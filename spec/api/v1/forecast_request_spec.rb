@@ -64,5 +64,19 @@ describe 'Forecast' do
         end
       end
     end
+
+    describe 'sad path' do
+      it 'returns an error if no location is given' do
+        VCR.use_cassette('get_nil_forecast') do
+          get '/api/v1/forecast'
+
+          error = JSON.parse(response.body, symbolize_names: true)
+
+          expect(error).to be_a(Hash)
+          expect(error).to have_key(:error)
+          expect(error[:error]).to eq('Please provide a location')
+        end
+      end
+    end
   end
 end
