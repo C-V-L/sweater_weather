@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.teleport.org/api/urban_areas/slug:asdf/salaries/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '214'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Apr 2023 16:36:30 GMT
+      Server:
+      - nginx
+      Vary:
+      - Origin,Accept-Encoding
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 3928ebdde42d36a72f49a8de192dda82.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C1
+      X-Amz-Cf-Id:
+      - 90kuYTU1RxxZtd4W7UKQguoVeJtTwD09xdFlcABubysJT12OaRlumA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": 404, "message": "Not Found. You have requested this URI
+        [/api/public_api/urban_areas/slug:asdf/salaries/] but did you mean /api/public_api/urban_areas/<regex(\"slug\\:[0-9a-z-]+\"):urban_area_id>/salaries/
+        or /api/public_api/urban_areas/teleport:<regex(\"[0-9a-z]{5}\"):urban_area_id>/salaries/
+        or /api/public_api/urban_areas/<regex(\"slug\\:[0-9a-z-]+\"):urban_area_id>/scores/
+        ?"}'
+  recorded_at: Mon, 24 Apr 2023 16:36:30 GMT
+recorded_with: VCR 6.1.0

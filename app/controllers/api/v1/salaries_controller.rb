@@ -2,7 +2,11 @@ class Api::V1::SalariesController < ApplicationController
   def index
     if params[:destination].present?
       city_data = TeleportFacade.new(params[:destination]).get_salary_and_weather_data
-      render json: SalariesSerializer.new(city_data)
+      if city_data[:error]
+        render json: { error: city_data[:error] }, status: 404
+      else
+        render json: SalariesSerializer.new(city_data)
+      end
     end
   end
 end

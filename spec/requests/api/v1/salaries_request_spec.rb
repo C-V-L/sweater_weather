@@ -26,6 +26,17 @@ describe 'Salaries API' do
             job[:title]
           end
           expect(titles).to eq(["Data Analyst", "Data Scientist", "Mobile Developer", "QA Engineer", "Software Engineer", "Systems Administrator", "Web Developer"])
+          expect(json[:data][:attributes][:salaries][0]).to eq({:title=>"Data Analyst", :min=>"$42878.34", :max=>"$62106.69"})
+        end
+      end
+    end
+
+    describe 'sad path' do
+      it 'will return an error if the city is not found' do
+        VCR.use_cassette('request_invalid_city') do
+          get '/api/v1/salaries?destination=asdf'
+          error = JSON.parse(response.body, symbolize_names: true)
+          expect(error[:error]).to eq("City not found")
         end
       end
     end
