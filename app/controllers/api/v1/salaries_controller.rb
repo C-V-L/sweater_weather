@@ -7,6 +7,8 @@ class Api::V1::SalariesController < ApplicationController
       else
         render json: SalariesSerializer.new(city_data)
       end
+    else
+      render json: { error: 'Please provide a location' }, status: 400
     end
   end
 end
