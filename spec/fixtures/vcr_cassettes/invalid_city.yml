@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?location=asdf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Key:
+      - XQ1WkgZghVVjdwh0FahnnLwkd40War2H
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Apr 2023 15:42:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '665'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14941'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14941'
+      Ratelimit-Reset:
+      - '2197068'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 94c35d30-e2b6-11ed-b258-fd743e58744d
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=1,geocoding=1
+      Etag:
+      - W/"299-XdCJPPzEyMbYNhWeGM+EJB1Y2Ck"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJhc2RmIn0sImxvY2F0aW9ucyI6W3sic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IiIsImFkbWluQXJlYTUiOiIiLCJhZG1pbkFyZWE0IjoiIiwiYWRtaW5BcmVhMyI6IiIsImFkbWluQXJlYTEiOiJVUyIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBMVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ09VTlRSWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOC44OTAzNywibG5nIjotNzcuMDMxOTZ9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6MzguODkwMzcsImxuZyI6LTc3LjAzMTk2fSwibWFwVXJsIjoiIiwic291cmNlIjoiRkFMTEJBQ0sifV19XX0=
+  recorded_at: Mon, 24 Apr 2023 15:42:12 GMT
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/current.json?aqi=no&key=1dae7a14b118428896d202223232304&q=38.89037,-77.03196
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Key:
+      - 1dae7a14b118428896d202223232304
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Apr 2023 15:42:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-940
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 04/24/2023 15:42:13
+      Cdn-Edgestorageid:
+      - '941'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 2a7077b9106c8adf77f9de01f3ef45ff
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Washington","region":"District of Columbia","country":"United
+        States of America","lat":38.89,"lon":-77.03,"tz_id":"America/New_York","localtime_epoch":1682350932,"localtime":"2023-04-24
+        11:42"},"current":{"last_updated_epoch":1682350200,"last_updated":"2023-04-24
+        11:30","temp_c":12.2,"temp_f":54.0,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":6.9,"wind_kph":11.2,"wind_degree":300,"wind_dir":"WNW","pressure_mb":1020.0,"pressure_in":30.13,"precip_mm":0.0,"precip_in":0.0,"humidity":41,"cloud":25,"feelslike_c":11.0,"feelslike_f":51.9,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":8.3,"gust_kph":13.3}}'
+  recorded_at: Mon, 24 Apr 2023 15:42:13 GMT
+- request:
+    method: get
+    uri: https://api.teleport.org/api/urban_areas/slug:asdf/salaries/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '214'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Apr 2023 15:42:13 GMT
+      Server:
+      - nginx
+      Vary:
+      - Origin,Accept-Encoding
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 68aef80d7f290793b86c83a688a0464e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C1
+      X-Amz-Cf-Id:
+      - 8y-ojfzqcI2pv1xw8t6PgLdW-TaGkIGxh4QKQWHLpSAmJuBcM_AMPg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": 404, "message": "Not Found. You have requested this URI
+        [/api/public_api/urban_areas/slug:asdf/salaries/] but did you mean /api/public_api/urban_areas/<regex(\"slug\\:[0-9a-z-]+\"):urban_area_id>/salaries/
+        or /api/public_api/urban_areas/teleport:<regex(\"[0-9a-z]{5}\"):urban_area_id>/salaries/
+        or /api/public_api/urban_areas/<regex(\"slug\\:[0-9a-z-]+\"):urban_area_id>/scores/
+        ?"}'
+  recorded_at: Mon, 24 Apr 2023 15:42:13 GMT
+recorded_with: VCR 6.1.0
