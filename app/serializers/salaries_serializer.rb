@@ -12,7 +12,7 @@ class SalariesSerializer
   attribute :forecast do |city_data|
     { 
       summary: city_data[:weather][:current][:condition][:text],
-      temperature: city_data[:weather][:current][:temp_f]
+      temperature: "#{city_data[:weather][:current][:temp_f]} F"
     }
   end
 
