@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/forecast.json?dt=2023-04-26&hour=12&key=1dae7a14b118428896d202223232304&q=moab,ut
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Key:
+      - 1dae7a14b118428896d202223232304
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Apr 2023 23:26:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1029
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 04/25/2023 23:26:03
+      Cdn-Edgestorageid:
+      - '845'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - a9f29234e8a4e03f3dd1cc68c8eae46f
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Moab","region":"Utah","country":"United States
+        of America","lat":38.57,"lon":-109.55,"tz_id":"America/Denver","localtime_epoch":1682465163,"localtime":"2023-04-25
+        17:26"},"current":{"last_updated_epoch":1682464500,"last_updated":"2023-04-25
+        17:15","temp_c":11.1,"temp_f":52.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":11.9,"wind_kph":19.1,"wind_degree":10,"wind_dir":"N","pressure_mb":1013.0,"pressure_in":29.91,"precip_mm":0.0,"precip_in":0.0,"humidity":36,"cloud":100,"feelslike_c":9.1,"feelslike_f":48.3,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":12.1,"gust_kph":19.4},"forecast":{"forecastday":[{"date":"2023-04-26","date_epoch":1682467200,"day":{"maxtemp_c":19.2,"maxtemp_f":66.6,"mintemp_c":4.9,"mintemp_f":40.8,"avgtemp_c":12.2,"avgtemp_f":53.9,"maxwind_mph":17.0,"maxwind_kph":27.4,"totalprecip_mm":0.0,"totalprecip_in":0.0,"totalsnow_cm":0.0,"avgvis_km":10.0,"avgvis_miles":6.0,"avghumidity":42.0,"daily_will_it_rain":0,"daily_chance_of_rain":0,"daily_will_it_snow":0,"daily_chance_of_snow":0,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png","code":1000},"uv":4.0},"astro":{"sunrise":"06:27
+        AM","sunset":"08:05 PM","moonrise":"11:12 AM","moonset":"02:02 AM","moon_phase":"Waxing
+        Crescent","moon_illumination":"32"},"hour":[{"time_epoch":1682532000,"time":"2023-04-26
+        12:00","temp_c":14.8,"temp_f":58.6,"is_day":1,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png","code":1000},"wind_mph":17.0,"wind_kph":27.4,"wind_degree":16,"wind_dir":"NNE","pressure_mb":1016.0,"pressure_in":29.99,"precip_mm":0.0,"precip_in":0.0,"humidity":36,"cloud":4,"feelslike_c":13.0,"feelslike_f":55.4,"windchill_c":13.0,"windchill_f":55.4,"heatindex_c":14.8,"heatindex_f":58.6,"dewpoint_c":-0.1,"dewpoint_f":31.8,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":19.5,"gust_kph":31.3,"uv":4.0}]}]}}'
+  recorded_at: Tue, 25 Apr 2023 23:26:03 GMT
+recorded_with: VCR 6.1.0
