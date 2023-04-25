@@ -10,6 +10,10 @@ class MapquestService
     response[:results][0][:locations][0][:latLng]
   end
 
+  def self.get_directions(origin, destination)
+    get_url("/directions/v2/route?from=#{origin}&to=#{destination}")
+  end
+
   private 
 
   def self.conn
