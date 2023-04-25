@@ -24,5 +24,31 @@ describe 'Sessions API' do
         expect(login[:data][:attributes][:email]).to eq(user_params[:email])
       end
     end
+
+    describe 'sad path' do
+      it 'returns a non-specfic error if email is not found' do
+        user_params = {
+          email: 'test1@test.com',
+          password: 'password'
+        }
+        post '/api/v1/sessions', params: user_params.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+
+        error = JSON.parse(response.body, symbolize_names: true)
+        expect(response.status).to eq(401)
+        expect(error[:error]).to eq("Email or password is incorrect")
+      end
+
+      it 'returns a non-specfic error if password is not correct' do
+        user_params = {
+          email: 'test@test.com',
+          password: 'password1'
+        }
+        post '/api/v1/sessions', params: user_params.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+
+        error = JSON.parse(response.body, symbolize_names: true)
+        expect(response.status).to eq(401)
+        expect(error[:error]).to eq("Email or password is incorrect")
+      end
+    end
   end
 end
