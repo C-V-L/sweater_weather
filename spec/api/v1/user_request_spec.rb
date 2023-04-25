@@ -12,10 +12,15 @@ describe 'User API' do
           password: 'password',
           password_confirmation: 'password' 
         }
-        post '/api/v1/users', params: user_params
 
-        expect(response).to be_successful
+        post '/api/v1/users', params: user_params.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+
         user = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to be_successful
+        expect(user).to have_key(:data)
+        expect(user[:data]).to have_key(:type)
+        expect(user[:data][:type]).to eq('users')
+        expect(user[:data]).to have_key(:id)
         expect(user[:data][:attributes]).to have_key(:api_key)
         expect(user[:data][:attributes][:api_key]).to be_a(String)
         expect(user[:data][:attributes]).to have_key(:email)
@@ -31,7 +36,7 @@ describe 'User API' do
           password: 'password',
           password_confirmation: 'password' 
         }
-        post '/api/v1/users', params: user2_params
+        post '/api/v1/users', params: user2_params.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
 
         error = JSON.parse(response.body, symbolize_names: true)
         expect(response.status).to eq(404)
@@ -44,11 +49,19 @@ describe 'User API' do
           password: 'password1',
           password_confirmation: 'password' 
         }
-        post '/api/v1/users', params: user_params
+        post '/api/v1/users', params: user_params.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
 
         error = JSON.parse(response.body, symbolize_names: true)
         expect(response.status).to eq(404)
         expect(error[:errors][0][:title]).to include("Validation failed: Password confirmation doesn't match Password")
+      end
+
+      it 'params cannot be passed in url' do
+        post '/api/v1/users?email=testing@test.com&password=abc123&password_confirmation=abc123'
+
+        error = JSON.parse(response.body, symbolize_names: true)
+        expect(response.status).to eq(404)
+        expect(error[:errors][0][:title]).to eq("param is missing or the value is empty: user")
       end
     end
   end
