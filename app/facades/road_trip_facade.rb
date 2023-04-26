@@ -16,11 +16,11 @@ class RoadTripFacade
         end_city: @destination, 
         travel_time: route[:route][:formattedTime], 
         weather_at_eta: { 
-          datetime: Time.at(arrival_time_unix).strftime("%Y-%m-%d %H:%M:%S"), 
-          temperature: weather[:forecast][:forecastday][0][:hour][0][:temp_f],
-          conditions: weather[:forecast][:forecastday][0][:hour][0][:condition][:text] 
-          } 
-        }
+                        datetime: Time.at(arrival_time_unix).strftime("%Y-%m-%d %H:%M:%S"), 
+                        temperature: weather[:forecast][:forecastday][0][:hour][0][:temp_f],
+                        conditions: weather[:forecast][:forecastday][0][:hour][0][:condition][:text] 
+                        } 
+      }
       else
         { 
           start_city: @origin, 
