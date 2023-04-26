@@ -6,7 +6,7 @@ describe 'Mapquest Facade' do
       it 'returns a road trip object with travel time and arrival forecast' do
         VCR.use_cassette('mapquest_facade_road_trip') do
           payload = { origin: 'Denver,CO', destination: 'Moab,UT' }
-          road_trip = MapQuestFacade.new(payload).road_trip
+          road_trip = RoadTripFacade.new(payload).road_trip
           expect(road_trip).to be_a(Hash)
           expect(road_trip[:start_city]).to eq('Denver,CO')
           expect(road_trip[:end_city]).to eq('Moab,UT')

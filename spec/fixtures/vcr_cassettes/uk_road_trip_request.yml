@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&to=London,UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Key:
+      - XQ1WkgZghVVjdwh0FahnnLwkd40War2H
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Apr 2023 00:30:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14781'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14781'
+      Ratelimit-Reset:
+      - '2078964'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 8fde0fe0-e3c9-11ed-9d80-87f90737737a
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-X78qyaDM1nc+nT5zcf5LS9dqzT4"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Wed, 26 Apr 2023 00:00:00 GMT
+recorded_with: VCR 6.1.0
